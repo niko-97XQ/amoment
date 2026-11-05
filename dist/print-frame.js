@@ -6,9 +6,25 @@ export const frames = [
 ];
 
 // All dimensions scale with the photo, so preview and JPG use the same composition.
-export function frameLayout(w,h,id,width=100){
+const stockDimensions = {
+ 'polaroid-sx70-film': [88,107,79,79],
+ 'polaroid-itype': [88,107,79,79],
+ 'instax-mini-film': [54,86,46,62],
+ 'instax-square-film': [72,86,62,62],
+ 'instax-wide-film': [108,86,99,62]
+};
+export function frameLayout(w,h,id,width=100,paper=null){
  if(id==='none')return {w,h,x:0,y:0,iw:w,ih:h};
  const unit=Math.min(w,h),k=width/100;
+ const dimensions = stockDimensions[paper?.stock];
+ if (dimensions && paper.frame === id) {
+  const [sheetW,sheetH,imageW,imageH] = dimensions;
+  const scale = unit / Math.min(imageW,imageH);
+  const side = (sheetW-imageW)/2;
+  const x = Math.round(side*scale*k), y = x;
+  const iw = Math.round(imageW*scale), ih = Math.round(imageH*scale);
+  return {x,y,iw,ih,w:iw+2*x,h:ih+y+Math.round((sheetH-imageH-side)*scale*k)};
+ }
  let iw=w,ih=h;
  if(id==='instant'){iw=unit;ih=unit;}
  if(id==='mini'){iw=unit;ih=unit*1.32;}
@@ -20,8 +36,8 @@ export function frameLayout(w,h,id,width=100){
  return {w:Math.round(iw+side*2),h:Math.round(ih+top+bottom),x:side,y:top,iw:Math.round(iw),ih:Math.round(ih)};
 }
 
-export function composePrint(target,photo,{id='none',width=100,fit='contain'}={}){
- const l=frameLayout(photo.width,photo.height,id,width),c=target.getContext('2d');
+export function composePrint(target,photo,{id='none',width=100,fit='contain',paper=null}={}){
+ const l=frameLayout(photo.width,photo.height,id,width,paper),c=target.getContext('2d');
  if(target.width!==l.w)target.width=l.w;if(target.height!==l.h)target.height=l.h;
  c.clearRect(0,0,l.w,l.h);
  const film=id.startsWith('film');c.fillStyle=film?'#171410':'#f0ede5';c.fillRect(0,0,l.w,l.h);
