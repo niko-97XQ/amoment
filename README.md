@@ -23,3 +23,7 @@ Semantic HTML, CSS, JavaScript modules, Canvas 2D, Three.js, and locally served 
 ## Publishing
 
 The GitHub repository is intended to remain private. Only `dist/` should be served publicly; repository metadata and local development files should not be deployed. As with every browser website, the delivered HTML, CSS, JavaScript and assets remain accessible to visitors.
+
+## Deployment
+
+The site is deployed to GitHub Pages from the `dist` folder via GitHub Actions.
