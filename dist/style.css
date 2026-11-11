@@ -99,3 +99,9 @@ dialog{width:min(460px,calc(100% - 40px));padding:44px;background:#191d1e;border
 .collection-tabs{display:flex;gap:4px;margin:0 6px 20px}.collection-tabs button{flex:1;padding:9px 2px;background:transparent;color:#777;font:12px 'Bahnschrift','Segoe UI',sans-serif;border:0;border-radius:5px;cursor:pointer}.collection-tabs button[aria-pressed=true]{background:#242420;color:#ece8dc}.collection-tabs button:hover{color:#fff}.collection-tabs button:focus-visible{outline:1px solid #d5b572;outline-offset:2px}@media(max-width:700px){.collection-tabs{flex-direction:column;margin:0 0 12px}.collection-tabs button{font-size:10px}}
 
 .collection-header{position:sticky;top:-25px;z-index:2;background:#090c0a;padding-top:8px;padding-bottom:1px}.collection-header .collection-tabs{margin-bottom:12px}@media(max-width:700px){.collection-header{top:-20px}}
+
+/* Cover footer: links to the two written pages, kept quiet next to the tools. */
+.cover-nav{display:flex;align-items:center;gap:21px;margin-right:26px}
+.cover-nav a{font-size:9px;letter-spacing:.3px;color:#777e83;text-decoration:none;padding:6px 0}
+.cover-nav a:hover{color:#e7e7e1}
+@media(max-width:700px){.cover-nav{gap:14px;margin-right:16px}.cover-nav a{font-size:8px}}

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="About Amoment — a small darkroom you can walk into. What it is, the four rooms it is built from, and how it is made.">
+  <title>About — Amoment</title>
+  <link rel="icon" href="./assets/mark.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Amoment">
+  <meta property="og:title" content="About — Amoment">
+  <meta property="og:description" content="A small darkroom you can walk into: what Amoment is, the four rooms it is built from, and how it is made.">
+  <meta property="og:url" content="https://niko-97xq.github.io/my-portfolio/about.html">
+  <meta property="og:image" content="https://niko-97xq.github.io/my-portfolio/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="./pages.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Amoment home"><img src="./assets/mark.svg" alt="" width="26" height="26"><span>Amoment</span></a>
+    <nav class="site-nav" aria-label="Pages">
+      <a href="./" data-zh="首页">Home</a>
+      <a href="./photos.html" data-zh="照片">Photos</a>
+      <a href="./cameras.html" data-zh="相机与胶片">Cameras</a>
+      <a href="./about.html" aria-current="page" data-zh="关于">About</a>
+      <button class="lang-toggle" type="button" aria-pressed="false">中文</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <p class="eyebrow">ABOUT THIS SITE</p>
+      <h1 data-zh="一个可以走进去的小暗房。">A small darkroom you can walk into.</h1>
+      <p data-zh="Amoment 是一个关于照片、胶片和其间时刻的网站。它不是相册——你选一台相机、装上一卷胶片、把一张照片冲洗出来，然后把它印在纸上。整个过程是慢的，这是刻意的。">Amoment is a website about photographs, film, and the moments in between. It is not a gallery: you choose a camera, load a film stock, develop a photograph, and print it on paper. The whole thing is slow. That is on purpose.</p>
+    </section>
+
+    <section class="section prose">
+      <h2 data-zh="为什么做这个">Why I built it</h2>
+      <p data-zh="大部分照片网站要你快速滑过一百张作品然后离开。我想要相反的：一个需要你动手、需要你等一等的地方。灯绳要拉，相纸要选，照片要打印出来才算完成。这些动作没有效率，但它们让你停下来。">Most photo sites want you to scroll past a hundred images and leave. I wanted the opposite: a place that asks you to do something, and to wait. You pull the cord, you choose the paper, the photograph is only finished once it is printed. None of these steps are efficient. All of them make you stay.</p>
+      <p data-zh="网站本身也在讲同一件事：胶片是一格一格留住的，光是一次曝光留住的。名字叫 Amoment，副标题是 a moment, held —— 把一个瞬间握住。">The name carries the same idea. Film holds a moment one frame at a time; light holds it in a single exposure. Amoment, held.</p>
+    </section>
+
+    <section class="section">
+      <h2 data-zh="四个房间">Four rooms</h2>
+      <ul class="rooms">
+        <li>
+          <span class="room-number">ROOM 01</span>
+          <h3 data-zh="封面 · 暗房的灯">Cover · the darkroom light</h3>
+          <p data-zh="网站从一片黑开始，只有一盏安全灯和一根拉绳。拉一下，房间亮了，你才走进去。">The site opens in the dark with a single safelight and a pull cord. Pull it, the room lights up, and you step inside.</p>
+        </li>
+        <li>
+          <span class="room-number">ROOM 02</span>
+          <h3 data-zh="相机房 · 选器材">Camera room · pick your gear</h3>
+          <p data-zh="六台相机和七种胶片，每一个都可以拖动旋转。不同胶片对应不同的颜色性格：Gold 偏暖，HP5 是黑白。">Six cameras and seven film stocks, each one you can drag to rotate. Every stock has its own colour character: Gold runs warm, HP5 is black and white.</p>
+        </li>
+        <li>
+          <span class="room-number">ROOM 03</span>
+          <h3 data-zh="工作台 · 冲洗">Workspace · develop</h3>
+          <p data-zh="放一张你自己的照片进去，选一个胶片外观，然后拖动分割线看处理前后。照片不会上传，一直在你的浏览器里。">Drop in one of your own photographs, choose a film look, then drag the divider to compare before and after. The photo never leaves your browser.</p>
+        </li>
+        <li>
+          <span class="room-number">ROOM 04</span>
+          <h3 data-zh="暗房 · 出片">Darkroom · print</h3>
+          <p data-zh="选一个相纸边框，把照片印出来，然后导出成 JPG。到了这一步，一张照片才算完成。">Choose a paper border, print the frame, and export a JPG. Only at this point is the photograph finished.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2 data-zh="怎么做的">How it is made</h2>
+      <ul class="tech">
+        <li><b data-zh="结构">Structure</b><span data-zh="语义化 HTML：header、main、section、aside、footer，交互元素用真正的 button，每个控件都有可读的标签。">Semantic HTML throughout: header, main, section, aside, footer, real buttons for real actions, and a readable label on every control.</span></li>
+        <li><b data-zh="样式">Styling</b><span data-zh="一套共用的 stylesheet，用 CSS 变量统一颜色和间距。布局用 grid 和 flexbox，没有用任何框架。">One shared stylesheet, colours and spacing driven by CSS variables. Layout with grid and flexbox. No framework.</span></li>
+        <li><b data-zh="交互">Behaviour</b><span data-zh="原生 JavaScript，按功能拆成 ES module：封面、相机房、工作台、打印各一个文件，互不干扰。">Vanilla JavaScript split into ES modules by feature: cover, camera room, workspace and printing each live in their own file.</span></li>
+        <li><b data-zh="3D 相机">3D cameras</b><span data-zh="相机和胶片是用 Three.js 渲染的 glTF 模型。库和模型都放在仓库里，不从 CDN 加载，断网也能用。">The cameras and film rolls are glTF models rendered with Three.js. Both the library and the models live in the repository, so nothing depends on a CDN.</span></li>
+        <li><b data-zh="照片处理">Photo processing</b><span data-zh="胶片外观是画在 canvas 上的：先画原图，再叠一层由 CSS filter 和颜色矩阵算出来的调整。对比功能把两张画布叠在一起，用一条分割线切开。">Film looks are drawn on a canvas: the photograph first, then a graded layer computed from CSS filters and colour matrices. Compare stacks the two canvases and cuts them with a divider.</span></li>
+        <li><b data-zh="部署">Deployment</b><span data-zh="代码在 GitHub 上，每次 push 到 main，一个 GitHub Actions 工作流就把 dist 目录发布到 GitHub Pages。没有构建步骤，没有服务器，也没有数据库。">The code lives on GitHub. Every push to main triggers a GitHub Actions workflow that publishes the dist folder to GitHub Pages. No build step, no server, no database.</span></li>
+      </ul>
+    </section>
+
+    <section class="section prose">
+      <h2 data-zh="照片来源">Where the photographs come from</h2>
+      <p data-zh="示例照片来自 Unsplash，遵循 Unsplash License，每一位摄影师都在封面右下角的 ⓘ 面板里署名。你自己导入的照片不会被上传，也不会离开浏览器。">The sample photographs come from Unsplash under the Unsplash License, and every photographer is credited in the ⓘ panel on the cover. A photograph you import yourself is never uploaded and never leaves the browser.</p>
+    </section>
+
+    <section class="section prose">
+      <h2 data-zh="如果重做一次">What I would change next</h2>
+      <p data-zh="第一，现在的工作台只做了颜色，没有真正的颗粒和锐度模型；下一步想把扫描的真实胶片样本加进来做校准。第二，胶片外观目前只在当前页面有效，应该能存下来、能分享给别人。第三，打印环节现在只是导出 JPG，如果能接一个真实的冲印服务会更完整。">First, the workspace only grades colour right now; there is no real grain or sharpness model yet, and I would calibrate against actual scanned film. Second, a film look only lives for the current session, so it should be saved and shareable. Third, printing only exports a JPG; connecting it to a real print service would close the loop.</p>
+    </section>
+
+    <section class="section prose">
+      <h2 data-zh="关于我">About me</h2>
+      <p data-zh="我是许强（Qiang Xu），在海南比勒费尔德应用科学大学（BiUH）读计算机科学。这个网站是 Web Technologies 课程的个人项目。代码在 GitHub 上，欢迎看提交历史。">I am Qiang Xu, a computer science student at Hainan Bielefeld University of Applied Sciences (BiUH). This site is my personal project for the Web Technologies course. The code is on GitHub, history included.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>AMOMENT · A MOMENT, HELD.</p>
+    <a href="https://github.com/niko-97XQ/my-portfolio" target="_blank" rel="noopener noreferrer" data-zh="源码在 GitHub 上 ↗">Source on GitHub ↗</a>
+  </footer>
+
+  <script type="module" src="./pages.js"></script>
+</body>
+</html>
